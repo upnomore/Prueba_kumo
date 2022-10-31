@@ -1,0 +1,17 @@
+<h5>BUSCADOR DE JUEGOS</h5>
+
+<div class="row">
+    <div class="col">
+        <form (ngSubmit)="buscar()" autocomplete="off">
+            <input type="text" name="termino" class="form-control" placeholder="Escribe el juego que buscas..." (keyup.enter)="buscar()" #txtBuscar>
+        </form>
+    </div>
+</div>
+
+<div *ngFor="let juego of juegos" class="card" style="width: 18rem;">
+    <h1>{{juego.count}}</h1>
+  </div>
+
+    <!-- <div class="alert alert-danger">
+        No se encontró el videojuego buscado
+    </div> -->
