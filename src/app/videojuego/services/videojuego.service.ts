@@ -19,7 +19,7 @@ export class VideojuegoService {
 
   constructor(private http: HttpClient) { }
 
-  buscarJuego(termino: string): Observable<Juego[]> {
+  buscarJuego(termino: string): Observable<Juego> {
 
     termino = termino.trim().toLocaleLowerCase();
     if(!this._historial.includes(termino)){
@@ -28,7 +28,7 @@ export class VideojuegoService {
     }
 
     const url = `${this.apiUrl}4fb0f361f416472284aa8c103c67cf08&search=${termino}`;
-    return this.http.get<Juego[]>(url)
+    return this.http.get<Juego>(url)
 
   }
 }

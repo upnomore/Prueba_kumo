@@ -1,6 +1,6 @@
 import { Component, ElementRef, ViewChild } from '@angular/core';
 import { VideojuegoService } from '../services/videojuego.service';
-import { Juego } from '../interfaces/videojuego.interface';
+import { Juego, Result } from '../interfaces/videojuego.interface';
 
 @Component({
   selector: 'app-buscar',
@@ -8,7 +8,7 @@ import { Juego } from '../interfaces/videojuego.interface';
 })
 export class BuscarComponent {
 
-  juegos: Juego[] = []
+  juegos: Result[] = []
 
   @ViewChild('txtBuscar') txtBuscar!:ElementRef<HTMLInputElement>
 
@@ -27,7 +27,8 @@ export class BuscarComponent {
 
     this.videojuegoService.buscarJuego(termino)
     .subscribe((resp) => {
-      console.log(resp)
+      this.juegos = resp.results;
+      console.log(resp);
     })
   }
 

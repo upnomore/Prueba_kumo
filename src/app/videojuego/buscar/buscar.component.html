@@ -8,9 +8,17 @@
     </div>
 </div>
 
-<div *ngFor="let juego of juegos" class="card" style="width: 18rem;">
-    <h1>{{juego.count}}</h1>
+    <div class="container">
+    <div class="row">
+  <div *ngFor="let juego of juegos" class="card col-sm-3">
+    <img src="{{juego.background_image}}" class="card-img-top">
+    <div class="card-body">
+      <h5 class="card-title">{{juego.name}}</h5>
+      <p class="card-text">Fecha de Lanzamiento: {{juego.released}}</p>
+    </div>
   </div>
+</div>
+</div>
 
     <!-- <div class="alert alert-danger">
         No se encontró el videojuego buscado

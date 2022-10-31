@@ -3,15 +3,15 @@ export interface Juego {
     next:                 string;
     previous:             null;
     results:              Result[];
-    seo_title:            string;
-    seo_description:      string;
-    seo_keywords:         string;
-    seo_h1:               string;
-    noindex:              boolean;
-    nofollow:             boolean;
-    description:          string;
-    filters:              Filters;
-    nofollow_collections: string[];
+    seo_title?:            string;
+    seo_description?:      string;
+    seo_keywords?:         string;
+    seo_h1?:               string;
+    noindex?:              boolean;
+    nofollow?:             boolean;
+    description?:          string;
+    filters?:              Filters;
+    nofollow_collections?: string[];
 }
 
 export interface Filters {
