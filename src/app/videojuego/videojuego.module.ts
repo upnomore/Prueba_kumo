@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainpageComponent } from './mainpage/mainpage.component';
 import { BuscarComponent } from './buscar/buscar.component';
 import { FormsModule } from '@angular/forms';
+import { MostrarComponent } from './mostrar/mostrar.component';
 
 
 
@@ -10,6 +11,7 @@ import { FormsModule } from '@angular/forms';
   declarations: [
     MainpageComponent,
     BuscarComponent,
+    MostrarComponent,
   ],
   exports: [
     MainpageComponent,

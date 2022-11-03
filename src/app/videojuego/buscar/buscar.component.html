@@ -8,18 +8,6 @@
     </div>
 </div>
 
-    <div class="container">
-    <div class="row">
-  <div *ngFor="let juego of juegos" class="card col-sm-3">
-    <img src="{{juego.background_image}}" class="card-img-top">
-    <div class="card-body">
-      <h5 class="card-title">{{juego.name}}</h5>
-      <p class="card-text">Fecha de Lanzamiento: {{juego.released}}</p>
-    </div>
-  </div>
+<div class="container">
+    <app-mostrar [juegos]="juegos"></app-mostrar>
 </div>
-</div>
-
-    <!-- <div class="alert alert-danger">
-        No se encontró el videojuego buscado
-    </div> -->

@@ -1,4 +1,4 @@
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, ViewChild, Input } from '@angular/core';
 import { VideojuegoService } from '../services/videojuego.service';
 import { Juego, Result } from '../interfaces/videojuego.interface';
 
@@ -8,7 +8,7 @@ import { Juego, Result } from '../interfaces/videojuego.interface';
 })
 export class BuscarComponent {
 
-  juegos: Result[] = []
+ juegos: Result[] = []
 
   @ViewChild('txtBuscar') txtBuscar!:ElementRef<HTMLInputElement>
 
